@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\troy0\\source\\repos\\CitiesAPI\\CitiesAPI.csproj": {}
+    "C:\\Users\\madel\\Desktop\\Code\\RestarauntsAPI\\CitiesAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\troy0\\source\\repos\\CitiesAPI\\CitiesAPI.csproj": {
+    "C:\\Users\\madel\\Desktop\\Code\\RestarauntsAPI\\CitiesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\troy0\\source\\repos\\CitiesAPI\\CitiesAPI.csproj",
+        "projectUniqueName": "C:\\Users\\madel\\Desktop\\Code\\RestarauntsAPI\\CitiesAPI.csproj",
         "projectName": "CitiesAPI",
-        "projectPath": "C:\\Users\\troy0\\source\\repos\\CitiesAPI\\CitiesAPI.csproj",
-        "packagesPath": "C:\\Users\\troy0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\troy0\\source\\repos\\CitiesAPI\\obj\\",
+        "projectPath": "C:\\Users\\madel\\Desktop\\Code\\RestarauntsAPI\\CitiesAPI.csproj",
+        "packagesPath": "C:\\Users\\madel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\madel\\Desktop\\Code\\RestarauntsAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\troy0\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\madel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,9 +40,21 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.1.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
