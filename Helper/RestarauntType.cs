@@ -11,6 +11,8 @@ namespace CitiesAPI.Helper
         Pizza,
         Indian,
         African,
-        Burgers
+        Burger,
+        European,
+        FineDining
     }
 }

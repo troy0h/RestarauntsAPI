@@ -1,7 +1,9 @@
+using CitiesAPI.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -26,8 +29,13 @@ namespace CitiesAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
+            services.AddDbContext<RestarauntDBContext>(opt =>
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DB"].ConnectionString;
+                opt.UseSqlServer(connectionString);
+            });
+            services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddSwaggerGen(opt =>
             {
                 opt.SwaggerDoc("v862", new OpenApiInfo { Title = "Restaraunts API", Version = "v862" });
